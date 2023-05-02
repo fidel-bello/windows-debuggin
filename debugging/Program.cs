@@ -4,11 +4,11 @@ internal class Program
     private static int Main(string[] args)
     {
         Debug debug = new();
-        int Found = debug.FindProccessByName("discord");
-        bool DidFindModule = debug.OpenProcess(Found);
+        int Found = debug.FindProccessByName("WWE2K23_x64");
 
         if (Found != -1)
         {
+            bool DidFindModule = debug.OpenProcess(Found);
             Console.WriteLine($"Process Id is: {Found}");
             if (DidFindModule != false)
             {
